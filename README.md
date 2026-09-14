@@ -10,4 +10,3 @@ En este repositorio guardaré las evidencias de todas las prácticas que me asig
 
 Cada materia tendrá una carpeta por práctica. En ella se organizarán el código, los diagramas y fotografías, el reporte, los resultados, las capturas de terminal y el video.
 
-La estructura inicial toma como referencia [Universidad, de Jesus-Jazisenot](https://github.com/Jesus-Jazisenot/Universidad). Las carpetas están listas para agregar las evidencias correspondientes.
