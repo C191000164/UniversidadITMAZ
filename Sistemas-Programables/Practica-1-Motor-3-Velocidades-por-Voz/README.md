@@ -13,7 +13,6 @@ Utilizar comandos de voz para controlar dispositivos con Arduino, comunicar una 
 ## Material utilizado
 
 - Arduino UNO R4 WiFi y cable USB.
-- Protoboard, LED y resistencia.
 - Puente H L298N.
 - Motorreductor con rueda.
 - Batería Energizer Max de 9 V.
