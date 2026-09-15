@@ -82,4 +82,18 @@ Durante las pruebas se enviaron diferentes ángulos desde la interfaz web y el M
 
 La interfaz permite seleccionar valores dentro del rango de **0° a 180°** y enviar la posición deseada al servomotor.
 
+### Interfaz web
+
+La siguiente captura muestra la página utilizada para seleccionar el ángulo y enviar la orden al Arduino.
+
+![Interfaz web de control del servomotor](resultados/Captura%20de%20pantalla%202026-09-14%20132953.png)
+
+### Monitor Serie
+
+En el Monitor Serie se observa la creación de la red **Arduino-Servo**, la dirección IP **192.168.4.1** y los diferentes ángulos recibidos durante las pruebas.
+
+![Monitor Serie con los ángulos registrados](resultados/Captura%20de%20pantalla%202026-09-14%20133018.png)
+
+- [Captura de la interfaz web](resultados/Captura%20de%20pantalla%202026-09-14%20132953.png).
+- [Captura del Monitor Serie](resultados/Captura%20de%20pantalla%202026-09-14%20133018.png).
 - [Resultados de la práctica.pdf](resultados/ResultadosPCSW.pdf).
