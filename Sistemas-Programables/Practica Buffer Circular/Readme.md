@@ -49,9 +49,13 @@ El reporte contiene el procedimiento de la práctica, los resultados, las eviden
 
 ## Resultados
 
-Cada pulsación válida se almacena en el buffer y después aparece en el Monitor Serie con un número consecutivo y su tiempo en microsegundos.
+Durante las pruebas, cada pulsación válida del botón generó un evento que el programa guardó temporalmente en el buffer circular. Después, el evento se procesó desde el `loop()` y apareció en el Monitor Serie con un número consecutivo y el tiempo de registro en microsegundos.
 
-La matriz LED continúa mostrando una línea en movimiento mientras se procesan los eventos. Si el buffer se llena, el programa cuenta los nuevos eventos que no pudieron almacenarse.
+El buffer cuenta con 32 posiciones y utiliza índices de lectura y escritura que regresan al inicio al llegar al final del arreglo. De esta manera, el programa puede seguir almacenando nuevos eventos conforme se liberan posiciones.
+
+Al mismo tiempo, la matriz LED integrada muestra una línea vertical en movimiento que se actualiza cada 100 ms. La animación continúa mientras el Arduino registra y procesa las pulsaciones, sin depender de una espera para cada evento.
+
+El programa también aplica un antirrebote de 40 ms. Si el buffer está lleno, los nuevos eventos se contabilizan como rechazados, sin sobrescribir los que todavía están pendientes de procesar.
 
 ## Video
 
@@ -63,6 +67,9 @@ El video muestra el funcionamiento del pulsador, el registro de eventos en el bu
 
 ## Conclusiones
 
-La práctica permitió comprender cómo almacenar temporalmente las pulsaciones de un botón y procesarlas después mediante un buffer circular.
+La práctica permitió comprender cómo funciona un buffer circular para almacenar temporalmente eventos producidos por un pulsador. Los índices de lectura y escritura permiten organizar el registro y el procesamiento de las pulsaciones dentro de un arreglo de tamaño fijo.
 
-El uso de interrupciones permite registrar los eventos mientras el Arduino continúa ejecutando la animación de la matriz LED.
+El uso de una interrupción facilita capturar los eventos cuando ocurren, mientras que el `loop()` los procesa y mantiene activa la animación de la matriz LED. El antirrebote ayuda a evitar registros repetidos de una misma pulsación.
+
+En conjunto, la práctica muestra cómo separar la captura y el procesamiento de información para que el Arduino pueda realizar varias tareas sin detener el funcionamiento general del programa.
+
