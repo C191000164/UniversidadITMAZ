@@ -1,99 +1,72 @@
-# Control de servomotor por interfaz web
-
-Control de un servomotor **MG996R** desde una página web utilizando un **Arduino UNO R4 WiFi**.
+# Control de Servomotor por Interfaz Web
 
 ## Descripción
 
-El Arduino UNO R4 WiFi crea una red inalámbrica llamada **Arduino-Servo** y funciona como servidor web en el puerto 80. Desde un navegador se puede seleccionar un ángulo entre **0° y 180°** y enviarlo al Arduino para posicionar el servomotor.
+Esta práctica consiste en controlar la posición de un servomotor MG996R desde una página web mediante un Arduino UNO R4 WiFi.
 
-La página web incluye una barra deslizante para seleccionar el ángulo y un botón **Mover Servo**. El valor recibido también se muestra en el Monitor Serie.
+El Arduino crea una red Wi-Fi llamada **Arduino-Servo** y muestra una página con una barra deslizante para seleccionar un ángulo de 0° a 180°. Al enviar el valor, el servomotor se posiciona en el ángulo solicitado.
 
-## Objetivos de aprendizaje
+## Objetivos
 
-Controlar la posición de un servomotor desde una interfaz web, utilizar la conexión Wi-Fi del Arduino UNO R4 WiFi y comprender el envío de datos mediante peticiones HTTP.
+- Controlar un servomotor desde una interfaz web.
+- Utilizar el Arduino UNO R4 WiFi como servidor web.
+- Seleccionar y enviar ángulos de 0° a 180°.
+- Recibir datos mediante peticiones HTTP.
+- Mostrar los ángulos recibidos en el Monitor Serie.
 
-## Material utilizado
+## Herramientas y material utilizado
 
 - Arduino UNO R4 WiFi.
+- Arduino IDE.
 - Servomotor MG996R de 180°.
 - Cables Dupont.
 - Cable USB-C.
 - Computadora o teléfono con navegador web.
-- Arduino IDE.
 
-## Diagrama del circuito
+## Diagrama
 
-![Diagrama del circuito](diagrama/Captura%20de%20pantalla%202026-09-14%20212836.png)
+El diagrama muestra las conexiones del servomotor con el Arduino. La señal de control se conecta al pin D9.
 
-El servomotor utiliza el pin **D9** del Arduino para la señal de control. La alimentación se conecta a **5V** y **GND**.
+![Diagrama de conexiones](diagrama/Diagrama-TinkercadCSW.png)
+
+![Armado del circuito](diagrama/ArmadoCSW.jpeg)
+
+[Ver carpeta Diagramas](diagrama/)
 
 ## Código
 
-- [Programa de Arduino](codigo/CSW.ino).
+El programa crea una red Wi-Fi y una página web para seleccionar el ángulo del servomotor.
 
-El programa utiliza las librerías **WiFiS3** y **Servo**. El Arduino crea la red Wi-Fi, inicia el servidor web y recibe el parámetro `angle` enviado desde la página. Si el valor está entre 0 y 180, se utiliza `servo.write()` para mover el servomotor a la posición solicitada.
+Utiliza las librerías `WiFiS3` y `Servo`. Al recibir un ángulo válido, utiliza `servo.write()` para posicionar el servomotor.
 
-## Video del funcionamiento
-
-[Ver video en YouTube](https://youtu.be/AtDGY__b80o)
-
-## Evidencias de armado
-
-![Armado del circuito](diagrama/WhatsApp%20Image%202026-09-14%20at%201.33.41%20PM.jpeg)
-
-![Prueba del servomotor](diagrama/WhatsApp%20Image%202026-09-14%20at%201.33.41%20PM%20(1).jpeg)
-
-- [Diagrama de conexión](diagrama/Captura%20de%20pantalla%202026-09-14%20212836.png).
-- [Fotografía del montaje 1](diagrama/WhatsApp%20Image%202026-09-14%20at%201.33.41%20PM.jpeg).
-- [Fotografía del montaje 2](diagrama/WhatsApp%20Image%202026-09-14%20at%201.33.41%20PM%20(1).jpeg).
+[Ver código](codigo/CSW.ino)
 
 ## Reporte
 
-[Reporte de la práctica.pdf](reporte/Reporte_Practica_Servomotor_Interfaz_Web.pdf)
+El reporte contiene el procedimiento de la práctica, las evidencias del circuito, los resultados y las observaciones sobre el funcionamiento del sistema.
 
-Incluye:
-
-- Objetivo, materiales y procedimiento.
-- Gráfica y tabla de datos.
-- Evidencias de la interfaz web y del Monitor Serie.
-- Observaciones sobre el comportamiento del sistema.
-
-## Conclusiones
-
-La práctica permitió controlar la posición de un servomotor MG996R mediante una página web alojada directamente en el Arduino UNO R4 WiFi. Se comprobó que el Arduino puede recibir diferentes valores de ángulo por Wi-Fi y utilizarlos para mover el servomotor sin necesidad de utilizar módulos de comunicación adicionales.
-
-También se observó en el Monitor Serie que los valores enviados desde la página fueron recibidos correctamente por el programa.
+[Ver reporte](reporte/Reporte_Practica_Servomotor_Interfaz_Web.pdf)
 
 ## Resultados
 
-Durante las pruebas se enviaron diferentes ángulos desde la interfaz web y el Monitor Serie registró los valores recibidos. Entre los ángulos probados se encuentran:
+Durante las pruebas se enviaron diferentes ángulos desde la interfaz web y se registraron los valores recibidos en el Monitor Serie.
 
-| Prueba | Ángulo registrado |
-|---|---:|
-| 1 | 50° |
-| 2 | 25° |
-| 3 | 124° |
-| 4 | 12° |
-| 5 | 166° |
-| 6 | 83° |
-| 7 | 124° |
-| 8 | 167° |
-| 9 | 7° |
+La página permite seleccionar ángulos entre 0° y 180° para controlar la posición del servomotor.
 
-La interfaz permite seleccionar valores dentro del rango de **0° a 180°** y enviar la posición deseada al servomotor.
+![Interfaz web](diagrama/Res-CSW.png)
 
-### Interfaz web
+![Monitor Serie](diagrama/Res-Term-CSW.png)
 
-La siguiente captura muestra la página utilizada para seleccionar el ángulo y enviar la orden al Arduino.
+## Video
 
-![Interfaz web de control del servomotor](resultados/Captura%20de%20pantalla%202026-09-14%20132953.png)
+El video muestra el control del servomotor desde la página web y el envío de ángulos al Arduino.
 
-### Monitor Serie
+[Ver video](https://youtu.be/AtDGY__b80o)
 
-En el Monitor Serie se observa la creación de la red **Arduino-Servo**, la dirección IP **192.168.4.1** y los diferentes ángulos recibidos durante las pruebas.
+[Ver carpeta Video](video/)
 
-![Monitor Serie con los ángulos registrados](resultados/Captura%20de%20pantalla%202026-09-14%20133018.png)
+## Conclusiones
 
-- [Captura de la interfaz web](resultados/Captura%20de%20pantalla%202026-09-14%20132953.png).
-- [Captura del Monitor Serie](resultados/Captura%20de%20pantalla%202026-09-14%20133018.png).
-- [Resultados de la práctica.pdf](resultados/ResultadosPCSW.pdf).
+La práctica permitió controlar un servomotor desde una página web creada por el Arduino UNO R4 WiFi.
+
+También se comprobó la recepción de los ángulos enviados mediante Wi-Fi y su registro en el Monitor Serie.
