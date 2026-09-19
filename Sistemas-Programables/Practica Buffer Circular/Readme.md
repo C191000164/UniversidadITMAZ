@@ -27,11 +27,11 @@ El programa almacena los eventos en un arreglo de 32 posiciones y los muestra en
 
 El diagrama muestra la conexión del pulsador al pin D2 y a GND del Arduino.
 
-![Diagrama de conexiones](diagrama/Diagrama-TinkercadBC.png)
+![Diagrama de conexiones](Diagrama/Diagrama-TinkercadBC.png)
 
-![Armado del circuito](diagrama/ArmadoBC.jpeg)
+![Armado del circuito](Diagrama/ArmadoBC.jpeg)
 
-[Ver carpeta Diagramas](diagrama/)
+[Ver carpeta Diagramas](Diagrama/)
 
 ## Código
 
@@ -39,13 +39,13 @@ El programa registra las pulsaciones mediante una interrupción y guarda sus tie
 
 Utiliza `micros()` para registrar los eventos, un antirrebote de 40 ms y `millis()` para actualizar la animación de la matriz LED cada 100 ms.
 
-[Ver código](codigo/Buffer_Circular1.ino)
+[Ver código](Codigo/Buffer_Circular1.ino)
 
 ## Reporte
 
 El reporte contiene el procedimiento de la práctica, los resultados, las evidencias del circuito y las observaciones sobre el comportamiento del sistema.
 
-[Ver reporte](reporte/Reporte_Practica_Buffer_Circular.pdf)
+[Ver reporte](Reporte/Reporte_Practica_Buffer_Circular.pdf)
 
 ## Resultados
 
@@ -63,7 +63,7 @@ El video muestra el funcionamiento del pulsador, el registro de eventos en el bu
 
 [Ver video](https://youtu.be/Lg2vXyP2IQk)
 
-[Ver carpeta Video](video/)
+[Ver carpeta Video](Video/)
 
 ## Conclusiones
 

@@ -27,11 +27,11 @@ El Arduino crea una red Wi-Fi llamada **Arduino-Servo** y muestra una página co
 
 El diagrama muestra las conexiones del servomotor con el Arduino. La señal de control se conecta al pin D9.
 
-![Diagrama de conexiones](diagrama/Diagrama-TinkercadCSW.png)
+![Diagrama de conexiones](Diagrama/Diagrama-TinkercadCSW.png)
 
-![Armado del circuito](diagrama/ArmadoCSW.jpeg)
+![Armado del circuito](Diagrama/ArmadoCSW.jpeg)
 
-[Ver carpeta Diagramas](diagrama/)
+[Ver carpeta Diagramas](Diagrama/)
 
 ## Código
 
@@ -39,13 +39,13 @@ El programa crea una red Wi-Fi y una página web para seleccionar el ángulo del
 
 Utiliza las librerías `WiFiS3` y `Servo`. Al recibir un ángulo válido, utiliza `servo.write()` para posicionar el servomotor.
 
-[Ver código](codigo/CSW.ino)
+[Ver código](Codigo/CSW.ino)
 
 ## Reporte
 
 El reporte contiene el procedimiento de la práctica, las evidencias del circuito, los resultados y las observaciones sobre el funcionamiento del sistema.
 
-[Ver reporte](reporte/Reporte_Practica_Servomotor_Interfaz_Web.pdf)
+[Ver reporte](Reporte/Reporte_Practica_Servomotor_Interfaz_Web.pdf)
 
 ## Resultados
 
@@ -57,9 +57,9 @@ La interfaz permite seleccionar ángulos dentro del rango de 0° a 180°. El pro
 
 Las capturas de la página web y del Monitor Serie sirven como evidencia del envío y la recepción de los ángulos, así como de la interacción entre la interfaz y el Arduino.
 
-![Interfaz web](diagrama/Res-CSW.png)
+![Interfaz web](Diagrama/Res-CSW.png)
 
-![Monitor Serie](diagrama/Res-Term-CSW.png)
+![Monitor Serie](Diagrama/Res-Term-CSW.png)
 
 ## Video
 
@@ -67,7 +67,7 @@ El video muestra el control del servomotor desde la página web y el envío de �
 
 [Ver video](https://youtu.be/AtDGY__b80o)
 
-[Ver carpeta Video](video/)
+[Ver carpeta Video](Video/)
 
 ## Conclusiones
 

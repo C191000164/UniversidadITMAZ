@@ -1,3 +1,0 @@
-# Código
-
-Programa de Arduino.

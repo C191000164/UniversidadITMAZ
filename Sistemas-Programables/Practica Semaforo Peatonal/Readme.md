@@ -30,11 +30,11 @@ El semáforo cambia de verde a amarillo y rojo. La solicitud del peatón se guar
 
 El diagrama muestra las conexiones del Arduino con los LEDs y el botón utilizados en la práctica.
 
-![Diagrama de conexiones](diagrama/Diagrama-TinkercadSP.png)
+![Diagrama de conexiones](Diagrama/Diagrama-TinkercadSP.png)
 
-![Armado del circuito](diagrama/ArmadoSP.jpeg)
+![Armado del circuito](Diagrama/ArmadoSP.jpeg)
 
-[Ver carpeta Diagramas](diagrama/)
+[Ver carpeta Diagramas](Diagrama/)
 
 ## Código
 
@@ -42,13 +42,13 @@ El programa controla la secuencia de luces del semáforo y guarda las solicitude
 
 Utiliza `millis()` para controlar los tiempos: verde durante 6 segundos, amarillo durante 2 segundos y rojo durante 6 segundos.
 
-[Ver código](codigo/Semaforo_Peatonal.ino)
+[Ver código](Codigo/Semaforo_Peatonal.ino)
 
 ## Reporte
 
 El reporte contiene el procedimiento de la práctica, las evidencias del circuito, los resultados y las observaciones sobre el funcionamiento del sistema.
 
-[Ver reporte](reporte/Reporte_Practica_Semaforo_Cruce_Peatonal.pdf)
+[Ver reporte](Reporte/Reporte_Practica_Semaforo_Cruce_Peatonal.pdf)
 
 ## Resultados
 
@@ -66,7 +66,7 @@ El video muestra el funcionamiento del semáforo vehicular y peatonal, incluyend
 
 [Ver video](https://youtu.be/Fw5TZOuojWg?si=uEQRUvMrNa91d_S3)
 
-[Ver carpeta Video](video/)
+[Ver carpeta Video](Video/)
 
 ## Conclusiones
 
