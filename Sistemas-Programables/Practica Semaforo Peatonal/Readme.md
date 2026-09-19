@@ -1,98 +1,73 @@
-# Semáforo con cruce peatonal
-
-Control de un semáforo vehicular con cruce peatonal mediante un **Arduino UNO R4 WiFi**, cinco LEDs y un botón para solicitar el paso del peatón.
+# Semáforo Vehicular y Peatonal con Arduino
 
 ## Descripción
 
-La práctica simula el funcionamiento de un semáforo para vehículos y peatones. El semáforo vehicular cambia entre **verde, amarillo y rojo**, mientras que el semáforo peatonal permanece en rojo hasta que se registra una solicitud mediante el botón.
+Esta práctica consiste en controlar un semáforo vehicular y peatonal mediante un Arduino UNO R4 WiFi, cinco LEDs y un botón para solicitar el cruce.
 
-El programa utiliza `millis()` para controlar los tiempos sin detener la lectura del botón. Cuando el peatón presiona el botón durante el estado verde o amarillo de los vehículos, la solicitud queda guardada y el LED verde peatonal se enciende cuando el semáforo de los vehículos llega al estado rojo.
+El semáforo cambia de verde a amarillo y rojo. La solicitud del peatón se guarda y se atiende cuando los vehículos tienen la luz roja. Los tiempos se controlan con `millis()`, sin detener la lectura del botón.
 
-## Objetivos de aprendizaje
+## Objetivos
 
-Programar una secuencia de semáforo con Arduino, controlar varios LEDs mediante salidas digitales, utilizar un botón con `INPUT_PULLUP`, implementar antirrebote y manejar tiempos mediante `millis()`.
+- Comprender el funcionamiento de un semáforo vehicular y peatonal.
+- Controlar cinco LEDs mediante salidas digitales.
+- Utilizar un botón para solicitar el cruce peatonal.
+- Programar los tiempos del semáforo con `millis()`.
+- Evitar lecturas repetidas del botón mediante antirrebote.
+- Permitir el cruce peatonal cuando el semáforo vehicular está en rojo.
 
-## Material utilizado
+## Herramientas y material utilizado
 
 - Arduino UNO R4 WiFi.
-- 5 LEDs: 2 rojos, 2 verdes y 1 amarillo.
-- Resistencias de **220 Ω**.
+- Arduino IDE.
+- Protoboard.
+- 2 LEDs rojos, 2 verdes y 1 amarillo.
+- Resistencias de 220 Ω.
 - Push button.
 - Cables Dupont.
 - Cable USB-C.
-- Computadora con Arduino IDE.
 
-## Diagrama del circuito
+## Diagrama
 
-![Diagrama del circuito](diagrama/Captura%20de%20pantalla%202026-09-15%20205356.png)
+El diagrama muestra las conexiones del Arduino con los LEDs y el botón utilizados en la práctica.
 
-Las conexiones utilizadas en el programa son:
+![Diagrama de conexiones](diagrama/Diagrama-TinkercadSP.png)
 
-| Elemento | Pin del Arduino |
-|---|---:|
-| LED rojo peatonal | D12 |
-| LED verde peatonal | D11 |
-| LED rojo vehicular | D10 |
-| LED amarillo vehicular | D9 |
-| LED verde vehicular | D8 |
-| Push button | D2 |
+![Armado del circuito](diagrama/ArmadoSP.jpeg)
 
-El botón está configurado con `INPUT_PULLUP`, por lo que una pulsación se detecta cuando la entrada cambia a nivel **LOW**.
+[Ver carpeta Diagramas](diagrama/)
 
 ## Código
 
-- [Programa de Arduino](codigo/Semaforo_Peatonal.ino).
+El programa controla la secuencia de luces del semáforo y guarda las solicitudes de cruce realizadas con el botón.
 
-El programa utiliza tres estados para el semáforo vehicular:
+Utiliza `millis()` para controlar los tiempos: verde durante 6 segundos, amarillo durante 2 segundos y rojo durante 6 segundos.
 
-- **Verde:** 6 segundos.
-- **Amarillo:** 2 segundos.
-- **Rojo:** 6 segundos.
-
-También se implementa un antirrebote de **40 ms** para evitar que una sola pulsación del botón sea detectada varias veces.
-
-## Video del funcionamiento
-
-[Ver video en YouTube](https://youtu.be/Fw5TZOuojWg?si=uEQRUvMrNa91d_S3)
-
-## Evidencias de armado
-
-![Armado del semáforo](diagrama/WhatsApp%20Image%202026-09-15%20at%201.16.33%20PM.jpeg)
-
-![Prueba del cruce peatonal](diagrama/WhatsApp%20Image%202026-09-15%20at%201.16.33%20PM%20(1).jpeg)
-
-- [Diagrama de conexión](diagrama/Captura%20de%20pantalla%202026-09-15%20205356.png).
-- [Fotografía del montaje 1](diagrama/WhatsApp%20Image%202026-09-15%20at%201.16.33%20PM.jpeg).
-- [Fotografía del montaje 2](diagrama/WhatsApp%20Image%202026-09-15%20at%201.16.33%20PM%20(1).jpeg).
+[Ver código](codigo/Semaforo_Peatonal.ino)
 
 ## Reporte
 
-[Reporte de la práctica.pdf](reporte/Reporte_Practica_Semaforo_Cruce_Peatonal.pdf)
+El reporte contiene el procedimiento de la práctica, las evidencias del circuito, los resultados y las observaciones sobre el funcionamiento del sistema.
 
-Incluye:
-
-- Objetivo, materiales y procedimiento.
-- Resultados de la práctica.
-- Tablas y observaciones del comportamiento del sistema.
-- Evidencias del montaje y funcionamiento.
-
-## Conclusiones
-
-La práctica permite comprender cómo coordinar diferentes salidas digitales para representar un sistema de semáforo vehicular y peatonal. El uso de `millis()` permite que el Arduino siga leyendo el botón mientras controla los tiempos de los LEDs, evitando bloquear el programa con esperas largas.
-
-También se aplica una lógica de solicitud peatonal: presionar el botón no cambia inmediatamente el semáforo, sino que guarda la petición y permite el cruce cuando los vehículos se encuentran en rojo.
+[Ver reporte](reporte/Reporte_Practica_Semaforo_Cruce_Peatonal.pdf)
 
 ## Resultados
 
-La secuencia programada mantiene el paso vehicular en verde durante 6 segundos, cambia a amarillo durante 2 segundos y posteriormente mantiene el rojo durante 6 segundos.
+El programa establece una secuencia vehicular de verde, amarillo y rojo con duraciones de 6, 2 y 6 segundos, respectivamente.
 
-| Estado vehicular | Duración | Estado peatonal |
-|---|---:|---|
-| Verde | 6 s | Rojo |
-| Amarillo | 2 s | Rojo |
-| Rojo sin solicitud | 6 s | Rojo |
-| Rojo con solicitud | 6 s | Verde |
+Al presionar el botón durante el verde o amarillo vehicular, la solicitud queda guardada. Cuando comienza el rojo vehicular, se enciende el verde peatonal; si no hay solicitud, el peatón permanece en rojo.
 
-Cuando el botón se presiona durante el verde o amarillo vehicular, la solicitud queda almacenada. Al comenzar el rojo vehicular, el paso peatonal cambia a verde durante ese estado y después regresa a rojo cuando comienza nuevamente el verde para los vehículos.
+El antirrebote de 40 ms evita que una misma pulsación se registre varias veces.
 
-- [Resultados de la práctica.pdf](resultados/ResultadosPSP.pdf).
+## Video
+
+El video muestra el funcionamiento del semáforo vehicular y peatonal, incluyendo la solicitud de cruce mediante el botón.
+
+[Ver video](https://youtu.be/Fw5TZOuojWg?si=uEQRUvMrNa91d_S3)
+
+[Ver carpeta Video](video/)
+
+## Conclusiones
+
+La práctica permitió aplicar el control de LEDs y la lectura de un botón para representar un semáforo vehicular y peatonal.
+
+El uso de `millis()` permite mantener la lectura del botón mientras transcurren los tiempos del semáforo. La solicitud peatonal se atiende cuando los vehículos tienen la luz roja.
