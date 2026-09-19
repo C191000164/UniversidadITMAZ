@@ -54,9 +54,13 @@ El reporte contiene el procedimiento de la práctica, las evidencias del circuit
 
 ## Resultados
 
-Durante las pruebas se confirmó el encendido del LED externo y de la matriz LED mediante los comandos enviados por Wi-Fi.
+Durante las pruebas, la aplicación envió comandos de voz al Arduino UNO R4 WiFi y se confirmó el encendido y apagado del LED externo y de la matriz LED integrada. Esto permitió observar la comunicación entre la aplicación y el Arduino mediante la red inalámbrica.
 
-El Monitor Serie mostró la conexión del Arduino y la recepción de las órdenes de velocidad y paro. El movimiento físico del motor quedó pendiente de confirmar.
+El Monitor Serie mostró la conexión del Arduino a Wi-Fi y la recepción de órdenes de velocidad y paro. El programa está preparado para aplicar al motor los niveles PWM de 110, 180 y 255, además del valor 0 para detenerlo.
+
+Las órdenes recibidas permiten comprobar la parte de comunicación y el control programado. Sin embargo, el movimiento físico del motorreductor quedó pendiente de confirmar, por lo que los valores PWM no representan velocidades medidas del motor.
+
+Las evidencias del Monitor Serie documentan las órdenes procesadas durante la práctica y ayudan a distinguir el funcionamiento del programa del comportamiento físico del motor.
 
 ![Pruebas en el Monitor Serie](Diagrama/Monitor_Serial.png)
 
@@ -70,6 +74,9 @@ El video muestra la práctica de control por voz y el envío de órdenes desde l
 
 ## Conclusiones
 
-La práctica permitió comprender cómo comunicar una aplicación con Arduino para controlar luces y programar velocidades mediante PWM y un puente H.
+La práctica permitió comprender cómo una aplicación creada en MIT App Inventor puede enviar comandos de voz por Wi-Fi a un Arduino para controlar diferentes dispositivos. Las pruebas confirmaron la recepción de las órdenes y el funcionamiento del LED externo y la matriz integrada.
 
-Las pruebas confirmaron la recepción de comandos y el funcionamiento de las luces. Para comprobar el movimiento del motor, es necesario revisar sus conexiones y alimentación.
+También se aplicó el uso de PWM y de un puente H para programar tres niveles de velocidad y una orden de paro para el motorreductor. El Monitor Serie permitió verificar los comandos recibidos y los valores enviados por el programa.
+
+El movimiento físico del motor quedó pendiente de confirmar. Esto muestra la importancia de revisar tanto la comunicación y el código como las conexiones y la alimentación del circuito.
+
