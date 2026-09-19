@@ -52,11 +52,13 @@ El reporte contiene el procedimiento de la práctica, las evidencias del circuit
 
 ## Resultados
 
-El programa establece una secuencia vehicular de verde, amarillo y rojo con duraciones de 6, 2 y 6 segundos, respectivamente.
+Durante las pruebas, el semáforo vehicular siguió la secuencia programada: luz verde durante 6 segundos, amarilla durante 2 segundos y roja durante 6 segundos. La temporización se realiza con `millis()`, por lo que el Arduino puede seguir leyendo el botón mientras cambian las luces.
 
-Al presionar el botón durante el verde o amarillo vehicular, la solicitud queda guardada. Cuando comienza el rojo vehicular, se enciende el verde peatonal; si no hay solicitud, el peatón permanece en rojo.
+Al presionar el botón durante el verde o amarillo vehicular, la solicitud de cruce queda guardada. Cuando los vehículos llegan al estado rojo, se enciende el LED verde peatonal para permitir el paso. Al terminar ese estado, el peatón vuelve a tener luz roja y comienza un nuevo ciclo vehicular.
 
-El antirrebote de 40 ms evita que una misma pulsación se registre varias veces.
+Cuando no existe una solicitud de cruce, la luz peatonal permanece en rojo y el semáforo continúa su secuencia normal. El programa también incorpora un antirrebote de 40 ms para evitar que una sola pulsación se registre varias veces.
+
+Estos resultados muestran cómo se coordinan las luces vehiculares y peatonales mediante el código y el circuito montado en Arduino.
 
 ## Video
 
@@ -68,6 +70,9 @@ El video muestra el funcionamiento del semáforo vehicular y peatonal, incluyend
 
 ## Conclusiones
 
-La práctica permitió aplicar el control de LEDs y la lectura de un botón para representar un semáforo vehicular y peatonal.
+La práctica permitió aplicar la programación de una secuencia de estados al control de un semáforo vehicular y peatonal. Mediante las salidas digitales del Arduino se coordinan las luces para representar el paso de vehículos y la solicitud de cruce.
 
-El uso de `millis()` permite mantener la lectura del botón mientras transcurren los tiempos del semáforo. La solicitud peatonal se atiende cuando los vehículos tienen la luz roja.
+El uso de `millis()` permite controlar las duraciones de cada luz sin interrumpir la lectura del botón. Además, el antirrebote ayuda a registrar correctamente una pulsación y la solicitud se conserva hasta que el semáforo vehicular llega al rojo.
+
+En conjunto, la práctica relaciona el programa con el funcionamiento del circuito y muestra la importancia de atender el cruce peatonal en el momento adecuado.
+
