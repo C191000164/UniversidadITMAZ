@@ -1,3 +1,3 @@
 # Video
 
-Aquí se agregará el enlace del video de la práctica cuando esté disponible.
+Enlace del video de la práctica: https://youtu.be/rPVRqIlCSFY?si=1B2Z4G6kzqzJozj-
