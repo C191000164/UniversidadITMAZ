@@ -28,11 +28,15 @@ El maestro envía órdenes para encender o apagar el LED desde el Monitor Serie.
 
 El diagrama muestra las conexiones entre el Arduino maestro, los tres esclavos y los componentes utilizados para la comunicación I2C.
 
-<p align="center"><img src="Diagrama/Diagrama-Tinkercad.png" alt="Diagrama de la práctica en Tinkercad" width="440"></p>
+| Diagrama en Tinkercad | Conexiones físicas |
+|:---:|:---:|
+| <img src="Diagrama/Diagrama-Tinkercad.png" alt="Diagrama de la práctica en Tinkercad" width="310"> | <img src="Diagrama/Diagrama-Fisico.png" alt="Diagrama de conexiones físicas" width="310"> |
 
-<p align="center"><img src="Diagrama/Diagrama-Fisico.png" alt="Diagrama de conexiones físicas" width="440"></p>
+**Montaje del circuito**
 
-<p align="center"><img src="Diagrama/Armado.jpg" alt="Armado físico del circuito" width="360"></p>
+<p align="center">
+  <img src="Diagrama/Armado.jpg" alt="Armado físico del circuito" width="380">
+</p>
 
 [Ver carpeta Diagramas](Diagrama/)
 
