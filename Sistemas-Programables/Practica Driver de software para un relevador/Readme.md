@@ -32,7 +32,7 @@ El montaje permite observar las salidas utilizadas por el programa y la conexió
 ### Diagrama de conexiones
 
 <p align="center">
-  <img src="Diagrama/Captura%20de%20pantalla%202026-10-20%20133405.png" alt="Diagrama de conexiones de la práctica de driver de software para un relevador" width="390">
+  <img src="Diagrama/Captura%20de%20pantalla%202026-10-20%20193330.png" alt="Diagrama de conexiones de la práctica de driver de software para un relevador" width="390">
 </p>
 
 ### Montaje físico
@@ -80,7 +80,7 @@ Otro resultado importante es que la clase contempla la diferencia entre las sali
 ### Evidencia del funcionamiento en el Monitor Serie
 
 <p align="center">
-  <img src="Diagrama/Captura%20de%20pantalla%202026-10-20%20193330.png" alt="Evidencia de comandos y estados mostrados en el Monitor Serie" width="390">
+  <img src="Diagrama/Captura%20de%20pantalla%202026-10-20%20133405.png" alt="Evidencia de comandos y estados mostrados en el Monitor Serie" width="390">
 </p>
 
 ## Video
