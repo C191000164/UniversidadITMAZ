@@ -1,5 +1,6 @@
 # Reporte
 
-[Leer el reporte del brazo robótico (PDF, 8 páginas)](Reporte_Brazo_Robotico.pdf)
+El reporte final documenta la conexión de los cinco servomotores, el control por joysticks, flechas y voz, las pruebas del prototipo y la solución al problema de alimentación.
 
-Incluye las conexiones de los cinco servomotores, el manejo con tres joysticks, los comandos de voz y gestos, imágenes del prototipo y los resultados de las pruebas.
+- [Reporte final del brazo robótico KUKA (PDF, 10 páginas)](Reporte_Brazo_Robotico_KUKA.pdf)
+- [Reporte de la etapa inicial (PDF, 8 páginas)](Reporte_Brazo_Robotico.pdf)

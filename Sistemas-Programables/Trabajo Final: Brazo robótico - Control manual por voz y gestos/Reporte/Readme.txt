@@ -1,0 +1,1 @@
+Reporte formal con introducción, objetivos, herramientas y material, desarrollo/metodología, evidencia del circuito y del monitor serie, análisis de resultados, problemas encontrados y solución, conclusiones individuales y referencias.

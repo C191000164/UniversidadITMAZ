@@ -1,3 +1,15 @@
-# Diagrama
+# Diagrama y fotografías
 
-Guarda aquí el diagrama de conexiones y las fotografías del montaje del brazo robótico.
+- [Diagrama de conexiones](diagrama_conexiones.png)
+- [Brazo terminado con la caja de joysticks](brazo_terminado.jpg)
+- [Interior de la caja de control](interior_caja.jpg)
+- [Fuente ATX del montaje](fuente_atx.jpg)
+- [Armado del circuito](armado_circuito.jpg)
+- [Brazo con una pieza para recoger](brazo_con_pieza.jpg)
+- [Revisión del circuito completo](reunion_fin_de_semana.jpg)
+- [Prueba con los joysticks](control_joysticks.jpg)
+- [Prueba con la app y la voz](control_app_voz.jpg)
+- [Monitor Serie durante la demostración](monitor_serie_video.jpg)
+- [Monitor Serie de una versión anterior](monitor_serie.png)
+- [Monitor Serie de la simulación](monitor_serie_simulacion.png)
+- [Gráficas de resultados de la simulación](graficas_resultados.png)
