@@ -28,7 +28,11 @@ El trabajo final de Sistemas Programables consiste en controlar un brazo robóti
 
 En el montaje, la fuente ATX de 5 V alimenta los servomotores y el Arduino alimenta los joysticks. Ambos circuitos comparten GND.
 
-![Diagrama de conexiones del brazo robótico](Diagrama/diagrama_conexiones.png)
+<p align="center">
+  <a href="Diagrama/diagrama_conexiones.png?raw=true">
+    <img src="Diagrama/diagrama_conexiones.png" alt="Diagrama de conexiones del brazo robótico" width="640">
+  </a>
+</p>
 
 | Articulación | Pin del servo | Joystick y entrada | Recorrido |
 | --- | --- | --- | --- |
@@ -40,7 +44,11 @@ En el montaje, la fuente ATX de 5 V alimenta los servomotores y el Arduino alime
 
 El botón del joystick 2 se conecta a A0 y activa la posición inicial (`HOME`).
 
-![Brazo robótico armado y caja de joysticks](Diagrama/brazo_terminado.jpg)
+<p align="center">
+  <a href="Diagrama/brazo_terminado.jpg?raw=true">
+    <img src="Diagrama/brazo_terminado.jpg" alt="Brazo robótico armado y caja de joysticks" width="360">
+  </a>
+</p>
 
 [Ver diagramas, fotografías y capturas](Diagrama/)
 
@@ -62,11 +70,21 @@ El reporte describe el montaje, los comandos de la app, las pruebas físicas y d
 
 En el brazo armado se comprobó el movimiento de las cinco articulaciones con los joysticks, el control mediante las flechas y la ejecución de varias órdenes de voz seguidas. Durante la prueba se registraron en el Monitor Serie los ángulos que reporta el programa.
 
-![Ángulos durante la prueba física en el Monitor Serie](Diagrama/monitor_serie_video.jpg)
-
 En la simulación, la orden «codo arriba» movió el codo de 90° a 60° en 0.48 s. También se comprobó que las flechas del hombro respetaron los límites de 55° y 125°.
 
-![Gráficas de las pruebas simuladas del brazo](Diagrama/graficas_resultados.png)
+<p align="center">
+  <a href="Diagrama/monitor_serie_simulacion.png?raw=true">
+    <img src="Diagrama/monitor_serie_simulacion.png" alt="Comandos de voz y ángulos de los cinco servos en el Monitor Serie de la simulación" width="620">
+  </a>
+  <br>
+  <sub>Monitor Serie de la simulación del programa final.</sub>
+</p>
+
+<p align="center">
+  <a href="Diagrama/graficas_resultados.png?raw=true">
+    <img src="Diagrama/graficas_resultados.png" alt="Gráficas de las pruebas simuladas del brazo" width="640">
+  </a>
+</p>
 
 Durante las pruebas físicas se corrigió el sentido de giro del codo. Algunos servos MG90S respondieron de forma irregular al probarlos por separado con la fuente ATX. Al conectar el circuito completo, los cinco servomotores funcionaron en conjunto.
 
